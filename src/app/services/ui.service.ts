@@ -7,14 +7,14 @@ export class UiService {
  private showAddTask: boolean=false;
  private subject = new Subject <any>();
 
- constructor() {}
+ constructor() { }
 
-  toggleAddTask():void{
+ toggleAddTask(): void {
     this.showAddTask = !this.showAddTask;
     this.subject.next(this.showAddTask)
   }
 
-  onTaggle(): Observable<any>{
+  onToggle(): Observable<any> {
     return this.subject.asObservable();
   }
 }
